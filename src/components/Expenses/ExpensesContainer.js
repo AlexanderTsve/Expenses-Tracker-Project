@@ -1,4 +1,4 @@
-import "./ExpensesContainer.css";
+import styles from "./ExpensesContainer.module.css";
 import Card from "../UI/Card";
 import ExpensesFilter from "./ExpensesFilter";
 import React, { useState } from "react";
@@ -14,7 +14,7 @@ const ExpensesContainer = (props) => {
     (expense) => String(expense.date.getFullYear()) === filteredYear
   );
   return (
-    <Card className="expenses">
+    <Card className={styles.expenses}>
       <ExpensesFilter
         setSelectedYear={filteredYear}
         onChangeYear={changeYear}

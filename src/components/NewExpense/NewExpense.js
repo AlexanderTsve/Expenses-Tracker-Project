@@ -1,4 +1,4 @@
-import "./NewExpense.css";
+import styles from "./NewExpense.module.css";
 import React, { useState } from "react";
 import ExpenseForm from "./ExpenseForm";
 
@@ -18,7 +18,7 @@ const NewExpense = (props) => {
     setShowForm(false);
   };
   return (
-    <div className="new-expense">
+    <div className={styles["new-expense"]}>
       {!showForm && <button onClick={showFormHandler}>Add New Expense</button>}
       {showForm && (
         <ExpenseForm
