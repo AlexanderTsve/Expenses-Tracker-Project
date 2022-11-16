@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import ExpensesContainer from "./components/Expenses/ExpensesContainer";
 import NewExpense from "./components/NewExpense/NewExpense";
 
@@ -32,10 +32,10 @@ function App() {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <NewExpense onAddExpense={addExpenseHandler} />
       <ExpensesContainer expenses={listOfExpenses}></ExpensesContainer>
-    </div>
+    </React.Fragment>
   );
 }
 
